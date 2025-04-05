@@ -1,0 +1,533 @@
+/* Duolingo-inspired theme for GymGo */
+/* Duolingo-inspired theme for GymGo */
+:root {
+    --duo-green: #58cc02;
+    --duo-green-hover: #46a302;
+    --duo-green-disabled: #89e219;
+    --duo-blue: #1cb0f6;
+    --duo-blue-hover: #0095d9;
+    --duo-orange: #ff9600;
+    --duo-orange-hover: #e08600;
+    --duo-red: #ff4b4b;
+    --duo-purple: #ce82ff;
+    --duo-gray: #e5e5e5;
+    --duo-dark-gray: #4b4b4b;
+    --duo-light-gray: #f7f7f7;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: "Nunito", "DIN Round Pro", sans-serif !important;
+    color: var(--duo-dark-gray) !important;
+  }
+  
+  /* Buttons */
+  .cursor-pointer,
+  button,
+  [type="button"],
+  [type="submit"] {
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.1s ease-in-out !important;
+  }
+  
+  .cursor-pointer:active,
+  button:active,
+  [type="button"]:active,
+  [type="submit"]:active {
+    border-bottom-width: 2px !important;
+    transform: translateY(2px) !important;
+  }
+  
+  /* Primary buttons (green) */
+  #resumeBtn,
+  #pauseBtn,
+  #submitWOBtn,
+  #accessCamBtn,
+  #saveSettingsBtn,
+  #scoresOKBtn,
+  #helpOKBtn,
+  #resultOKBtn {
+    background-color: var(--duo-green) !important;
+    color: white !important;
+    border-bottom-color: var(--duo-green-hover) !important;
+  }
+  
+  #resumeBtn:hover,
+  #pauseBtn:hover,
+  #submitWOBtn:hover,
+  #accessCamBtn:hover,
+  #saveSettingsBtn:hover,
+  #scoresOKBtn:hover,
+  #helpOKBtn:hover,
+  #resultOKBtn:hover {
+    background-color: var(--duo-green-hover) !important;
+  }
+  
+  /* Secondary buttons */
+  #helpBtn,
+  #scoresBtn,
+  #settingsBtn,
+  #cancelSettingsBtn,
+  #restartBtn {
+    background-color: var(--duo-light-gray) !important;
+    color: var(--duo-dark-gray) !important;
+    border: 2px solid #e5e5e5 !important;
+  }
+  
+  #helpBtn:hover,
+  #scoresBtn:hover,
+  #settingsBtn:hover,
+  #cancelSettingsBtn:hover,
+  #restartBtn:hover {
+    background-color: #e5e5e5 !important;
+  }
+  
+  /* Rounded containers */
+  .rounded-lg,
+  .shadow-md,
+  .shadow-2xl {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+  }
+  
+  /* Header tabs */
+  #segSettingsWOBtn,
+  #segSettingsAdvBtn,
+  #segJourneyBtn,
+  #segBestBtn,
+  #segHowToUseBtn,
+  #segAboutBtn {
+    border-radius: 12px 12px 0 0 !important;
+    font-weight: 700 !important;
+  }
+  
+  /* Override amber and yellow colors with Duolingo green */
+  .bg-amber-300,
+  .bg-yellow-500,
+  .hover\:bg-amber-500,
+  [class*="bg-amber-300"],
+  [class*="bg-yellow-500"],
+  [class*="hover:bg-amber-500"] {
+    background-color: var(--duo-green) !important;
+  }
+  
+  .bg-amber-200,
+  .hover\:bg-amber-300,
+  [class*="bg-amber-200"],
+  [class*="hover:bg-amber-300"] {
+    background-color: var(--duo-light-gray) !important;
+  }
+  
+  .text-gray-600,
+  .text-gray-700,
+  [class*="text-gray-600"],
+  [class*="text-gray-700"] {
+    color: var(--duo-dark-gray) !important;
+  }
+  
+  /* Progress bar */
+  #progressBarBox {
+    background-color: var(--duo-gray) !important;
+    border-radius: 10px !important;
+    height: 10px !important;
+    width: 100% !important;
+  }
+  
+  #confidenceBox {
+    background-color: var(--duo-green) !important;
+    border-radius: 10px !important;
+    height: 10px !important;
+  }
+  
+  /* Counter and timer circles */
+  .w-24.h-24.rounded-full,
+  div[class*="w-24 h-24 rounded-full"] {
+    background-color: white !important;
+    border: 4px solid var(--duo-green) !important;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Radio buttons */
+  input[type="radio"] {
+    accent-color: var(--duo-green) !important;
+  }
+  
+  /* Workout selection cards */
+  fieldset.grid label {
+    border: 2px solid var(--duo-gray) !important;
+    border-radius: 12px !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  fieldset.grid label:hover {
+    border-color: var(--duo-green) !important;
+    background-color: rgba(88, 204, 2, 0.05) !important;
+  }
+  
+  /* Toggle switches */
+  .switch {
+    position: relative !important;
+    display: inline-block !important;
+    width: 46px !important;
+    height: 26px !important;
+  }
+  
+  .slider {
+    background-color: var(--duo-gray) !important;
+  }
+  
+  .slider:before {
+    background-color: white !important;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--duo-green) !important;
+  }
+  
+  /* Modal backgrounds */
+  .bg-white-700,
+  .bg-white-700\/50,
+  .bg-white-700\/75,
+  [class*="bg-white-700"] {
+    background-color: rgba(75, 75, 75, 0.8) !important;
+  }
+  
+  /* Main container background */
+  .bg-white-600,
+  [class*="bg-white-600"] {
+    background-color: var(--duo-light-gray) !important;
+  }
+  
+  /* Video container */
+  #parentWebcamBox {
+    background-color: white !important;
+    border: 4px solid var(--duo-green) !important;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Loader */
+  .loader {
+    border-top-color: var(--duo-green) !important;
+  }
+  
+  /* Results box */
+  #resultBox .bg-white {
+    border: 4px solid var(--duo-green) !important;
+  }
+  
+  /* Journey scores */
+  #bodyJourneyBox .bg-white,
+  #bodyBestScoreBox .bg-white {
+    border-left: 4px solid var(--duo-green) !important;
+  }
+  
+  /* Custom animations */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-bounce {
+    animation: bounce 1s infinite !important;
+  }
+  
+  /* Celebration effect for completed reps */
+  @keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  #countBox.celebrate {
+    animation: celebrate 0.5s ease-in-out !important;
+    color: var(--duo-green) !important;
+  }
+  
+  /* Mascot styles */
+  .duolingo-mascot {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background-image: url('https://d35aaqx5ub95lt.cloudfront.net/images/owls/duo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 100;
+    transform: rotate(10deg);
+    pointer-events: none;
+  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --duo-green: #58cc02;
+  --duo-green-hover: #46a302;
+  --duo-green-disabled: #89e219;
+  --duo-blue: #1cb0f6;
+  --duo-blue-hover: #0095d9;
+  --duo-orange: #ff9600;
+  --duo-orange-hover: #e08600;
+  --duo-red: #ff4b4b;
+  --duo-purple: #ce82ff;
+  --duo-gray: #e5e5e5;
+  --duo-dark-gray: #4b4b4b;
+  --duo-light-gray: #f7f7f7;
+}
+
+/* Global styles */
+body {
+  font-family: "Nunito", "DIN Round Pro", sans-serif;
+  color: var(--duo-dark-gray);
+}
+
+/* Buttons */
+.cursor-pointer,
+button,
+[type="button"],
+[type="submit"] {
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.1s ease-in-out !important;
+}
+
+.cursor-pointer:active,
+button:active,
+[type="button"]:active,
+[type="submit"]:active {
+  border-bottom-width: 2px !important;
+  transform: translateY(2px);
+}
+
+/* Primary buttons (green) */
+#resumeBtn,
+#pauseBtn,
+#submitWOBtn,
+#accessCamBtn,
+#saveSettingsBtn,
+#scoresOKBtn,
+#helpOKBtn,
+#resultOKBtn {
+  \
+  background-color: var(  #accessCamBtn, #saveSettingsBtn, 
+#scoresOKBtn, #helpOKBtn, #resultOKBtn {
+  background-color: var(--duo-green) !important;
+  color: white !important;
+  border-bottom-color: var(--duo-green-hover) !important;
+}
+
+#resumeBtn:hover,
+#pauseBtn:hover,
+#submitWOBtn:hover,
+#accessCamBtn:hover,
+#saveSettingsBtn:hover,
+#scoresOKBtn:hover,
+#helpOKBtn:hover,
+#resultOKBtn:hover {
+  background-color: var(--duo-green-hover) !important;
+}
+
+/* Secondary buttons */
+#helpBtn,
+#scoresBtn,
+#settingsBtn,
+#cancelSettingsBtn,
+#restartBtn {
+  background-color: var(--duo-light-gray) !important;
+  color: var(--duo-dark-gray) !important;
+  border: 2px solid #e5e5e5 !important;
+}
+
+#helpBtn:hover,
+#scoresBtn:hover,
+#settingsBtn:hover,
+#cancelSettingsBtn:hover,
+#restartBtn:hover {
+  background-color: #e5e5e5 !important;
+}
+
+/* Rounded containers */
+.rounded-lg,
+.shadow-md,
+.shadow-2xl {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+/* Header tabs */
+#segSettingsWOBtn,
+#segSettingsAdvBtn,
+#segJourneyBtn,
+#segBestBtn,
+#segHowToUseBtn,
+#segAboutBtn {
+  border-radius: 12px 12px 0 0 !important;
+  font-weight: 700 !important;
+}
+
+.bg-amber-300,
+.bg-yellow-500,
+.hover\:bg-amber-500 {
+  background-color: var(--duo-green) !important;
+}
+
+.bg-amber-200,
+.hover\:bg-amber-300 {
+  background-color: var(--duo-light-gray) !important;
+}
+
+.text-gray-600,
+.text-gray-700 {
+  color: var(--duo-dark-gray) !important;
+}
+
+/* Progress bar */
+#progressBarBox {
+  background-color: var(--duo-gray) !important;
+  border-radius: 10px !important;
+  height: 10px !important;
+  width: 100% !important;
+}
+
+#confidenceBox {
+  background-color: var(--duo-green) !important;
+  border-radius: 10px !important;
+  height: 10px !important;
+}
+
+/* Counter and timer circles */
+.w-24.h-24.rounded-full {
+  background-color: white !important;
+  border: 4px solid var(--duo-green) !important;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+  accent-color: var(--duo-green) !important;
+}
+
+/* Workout selection cards */
+fieldset.grid label {
+  border: 2px solid var(--duo-gray) !important;
+  border-radius: 12px !important;
+  transition: all 0.2s ease !important;
+}
+
+fieldset.grid label:hover {
+  border-color: var(--duo-green) !important;
+  background-color: rgba(88, 204, 2, 0.05) !important;
+}
+
+/* Toggle switches */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+}
+
+.slider {
+  background-color: var(--duo-gray) !important;
+}
+
+.slider:before {
+  background-color: white !important;
+}
+
+input:checked + .slider {
+  background-color: var(--duo-green) !important;
+}
+
+/* Modal backgrounds */
+.bg-white-700,
+.bg-white-700\/50,
+.bg-white-700\/75 {
+  background-color: rgba(75, 75, 75, 0.8) !important;
+}
+
+/* Main container background */
+.bg-white-600 {
+  background-color: var(--duo-light-gray) !important;
+}
+
+/* Video container */
+#parentWebcamBox {
+  background-color: white !important;
+  border: 4px solid var(--duo-green) !important;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Loader */
+.loader {
+  border-top-color: var(--duo-green) !important;
+}
+
+/* Results box */
+#resultBox .bg-white {
+  border: 4px solid var(--duo-green) !important;
+}
+
+/* Journey scores */
+#bodyJourneyBox .bg-white,
+#bodyBestScoreBox .bg-white {
+  border-left: 4px solid var(--duo-green) !important;
+}
+
+/* Mascot addition */
+#parentWebcamBox::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background-image: url("https://d35aaqx5ub95lt.cloudfront.net/images/owls/duo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 100;
+  transform: rotate(10deg);
+  pointer-events: none;
+}
+
+/* Custom animations */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Celebration effect for completed reps */
+@keyframes celebrate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#countBox.celebrate {
+  animation: celebrate 0.5s ease-in-out;
+  color: var(--duo-green) !important;
+}
+
+/* Add this class with JavaScript when count changes */
+
