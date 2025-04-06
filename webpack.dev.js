@@ -9,4 +9,11 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle-dev.js",
   },
+  devServer: {
+    host: "0.0.0.0", // Accept all IPs
+    port: process.env.PORT || 8080, // Allow Render's dynamic port
+    allowedHosts: "all", // This line fixes the "Invalid Host header" error
+    hot: true,
+    historyApiFallback: true,
+  },
 });
